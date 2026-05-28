@@ -3,201 +3,329 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jer Sells SoCal | Featured Home</title>
+  <title>9350 Golondrina Dr | La Mesa Featured Home</title>
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f3ee;
-      color: #172033;
+      background: #f6f3ec;
+      color: #0f2340;
     }
+
+    a { color: inherit; }
 
     .hero {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: linear-gradient(135deg, #0f2340, #29496f);
-    }
-
-    .card {
-      max-width: 980px;
-      width: 100%;
-      background: #fff;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0,0,0,.25);
-    }
-
-    .photo {
-      min-height: 300px;
       background:
-        linear-gradient(rgba(15,35,64,.25), rgba(15,35,64,.65)),
+        linear-gradient(rgba(15,35,64,.25), rgba(15,35,64,.75)),
         url("images/golondrina.png");
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: end;
-      padding: 28px;
       color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 32px;
     }
 
-    .photo h1 {
-      margin: 0;
-      font-size: clamp(32px, 7vw, 62px);
-      line-height: 1;
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      padding-bottom: 40px;
     }
 
-    .content {
-      padding: 28px;
-    }
-
-    .badge {
+    .pill {
       display: inline-block;
       background: #d9b46f;
       color: #0f2340;
-      padding: 8px 12px;
+      padding: 9px 15px;
       border-radius: 999px;
       font-weight: bold;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
-    h2 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      color: #0f2340;
+    h1 {
+      font-size: clamp(42px, 8vw, 88px);
+      line-height: .95;
+      margin: 0 0 16px;
     }
 
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 12px 0;
+    .hero p {
+      font-size: clamp(18px, 3vw, 26px);
+      max-width: 760px;
+      line-height: 1.35;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .stat {
-      background: #f1f4f7;
-      border-radius: 14px;
-      padding: 16px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .stat span {
-      display: block;
-      font-size: 13px;
-      color: #555;
-      margin-top: 4px;
-      font-weight: normal;
-    }
-
-    .buttons {
-      display: grid;
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       margin-top: 24px;
     }
 
     .button {
-      display: block;
-      text-align: center;
-      padding: 16px 18px;
-      border-radius: 12px;
+      display: inline-block;
       text-decoration: none;
+      padding: 15px 22px;
+      border-radius: 12px;
       font-weight: bold;
-      font-size: 17px;
+      text-align: center;
     }
 
-    .primary {
+    .primary { background: #d9b46f; color: #0f2340; }
+    .dark { background: #0f2340; color: white; }
+    .light { background: white; color: #0f2340; }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 54px 24px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: -38px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 13px;
+      color: #666;
+      margin-top: 6px;
+      font-weight: normal;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+    h2 {
+      font-size: 34px;
+      margin: 0 0 16px;
+    }
+
+    p, li {
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .features li {
+      background: #f1f4f7;
+      padding: 13px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .finance-box {
       background: #0f2340;
       color: white;
     }
 
-    .secondary {
-      background: #0073e6;
-      color: white;
+    .finance-box .row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      padding: 12px 0;
+      gap: 20px;
     }
 
-    .light {
-      background: #eef2f6;
+    .finance-box .row:last-child {
+      border-bottom: none;
+    }
+
+    .lead-form input, .lead-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .lead-form button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #d9b46f;
       color: #0f2340;
+      font-weight: bold;
+      font-size: 17px;
+      cursor: pointer;
     }
 
-    .fineprint {
-      font-size: 13px;
-      color: #666;
-      margin-top: 24px;
-      line-height: 1.5;
+    footer {
+      background: #0f2340;
+      color: white;
+      text-align: center;
+      padding: 34px 20px;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .photo {
-        min-height: 260px;
-      }
+    @media (max-width: 850px) {
+      .hero { padding: 24px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .grid { grid-template-columns: 1fr; }
+      .features { grid-template-columns: 1fr; }
+      .button { width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <main class="hero">
-    <section class="card">
 
-      <div class="photo">
-        <h1>Featured Home</h1>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="pill">Featured Mount Helix Home</div>
+      <h1>9350 Golondrina Drive</h1>
+      <p>Spacious 4-bedroom La Mesa home with open-concept living, two fireplaces, a large fenced backyard, and easy access to San Diego.</p>
+
+      <div class="cta-row">
+        <a class="button primary" href="tel:8582096500">Call / Text Jer</a>
+        <a class="button light" href="https://scheduling.jeronathon.com" target="_blank">Request a Private Tour</a>
+        <a class="button dark" href="https://www.zillow.com/homedetails/9350-Golondrina-Dr-La-Mesa-CA-91941/52519183_zpid/" target="_blank">View Zillow Listing</a>
       </div>
+    </div>
+  </div>
 
-      <div class="content">
-        <span class="badge">Now Available in La Mesa</span>
+  <section class="stats">
+    <div class="stat">$1.25M <span>List Price</span></div>
+    <div class="stat">4 <span>Bedrooms</span></div>
+    <div class="stat">3 <span>Full Baths</span></div>
+    <div class="stat">2,766 <span>Sq Ft</span></div>
+    <div class="stat">11,820 <span>Sq Ft Lot</span></div>
+    <div class="stat">No HOA <span>Standard Sale</span></div>
+  </section>
 
-        <h2>9350 Golondrina Dr, La Mesa, CA 91941</h2>
+  <section class="grid">
+    <div class="card">
+      <h2>Welcome Home</h2>
+      <p>
+        This spacious and inviting two-story residence sits in the highly desirable Mount Helix area of La Mesa.
+        The home offers a flowing open-concept layout connecting the living room, dining area, and kitchen —
+        ideal for entertaining and everyday living.
+      </p>
+      <p>
+        Inside, you’ll find two fireplaces, natural light, a breakfast nook, built-in kitchen appliances,
+        a private primary suite with walk-in closet, central heating and cooling, laundry room, and a 2-car attached garage.
+      </p>
+    </div>
 
-        <div class="price">$1,250,000</div>
+    <div class="card finance-box">
+      <h2>Financing Snapshot</h2>
+      <div class="row"><strong>20% Down</strong><span>$250,000</span></div>
+      <div class="row"><strong>Estimated Loan</strong><span>$1,000,000</span></div>
+      <div class="row"><strong>Estimated Payment</strong><span>~$7,564/mo</span></div>
+      <div class="row"><strong>2025 Taxes</strong><span>~$897/mo</span></div>
+      <p style="font-size:13px;opacity:.85;">
+        Estimate only. Actual rate, payment, and terms depend on buyer qualifications and lender approval.
+      </p>
+    </div>
+  </section>
 
-        <div class="stats">
-          <div class="stat">4 <span>Bedrooms</span></div>
-          <div class="stat">3 <span>Bathrooms</span></div>
-          <div class="stat">2,766 <span>Sq Ft</span></div>
-        </div>
+  <section>
+    <div class="card">
+      <h2>Home Highlights</h2>
+      <ul class="features">
+        <li>Open-concept layout</li>
+        <li>Two fireplaces</li>
+        <li>Breakfast nook</li>
+        <li>Walk-in closet</li>
+        <li>Large fenced backyard</li>
+        <li>Central heating & cooling</li>
+        <li>2-car attached garage</li>
+        <li>Washer & dryer included</li>
+      </ul>
+    </div>
+  </section>
 
-        <p>
-          Spacious Mount Helix area home with room to entertain, relax, and enjoy the Southern California lifestyle.
-          Schedule a private showing or request more details below.
-        </p>
+  <section class="grid">
+    <div class="card">
+      <h2>Mount Helix / La Mesa Lifestyle</h2>
+      <p>
+        Located in the Mount Helix area of La Mesa, this home offers a suburban hillside feel with mature landscaping,
+        larger lots, and convenient access to Hwy 94, I-8, and SR-125.
+      </p>
+      <p>
+        Nearby destinations include Lake Murray, Mission Trails Regional Park, Grossmont Center,
+        and La Mesa Village shops and restaurants.
+      </p>
+    </div>
 
-        <div class="buttons">
-          <a class="button primary" href="tel:YOURPHONENUMBER">Call / Text Jer to Tour This Home</a>
+    <div class="card">
+      <h2>Property Details</h2>
+      <p><strong>MLS:</strong> 260009626</p>
+      <p><strong>Year Built:</strong> 2001</p>
+      <p><strong>Stories:</strong> 2-Story</p>
+      <p><strong>Garage:</strong> 2-Car Attached</p>
+      <p><strong>APN:</strong> 495-335-14</p>
+    </div>
+  </section>
 
-          <a class="button secondary" href="https://www.zillow.com/homedetails/9350-Golondrina-Dr-La-Mesa-CA-91941/52519183_zpid/" target="_blank">
-            View Full Listing on Zillow
-          </a>
+  <section id="tour">
+    <div class="card">
+      <h2>Request a Private Showing</h2>
+      <p>Interested in touring 9350 Golondrina Drive or learning about financing options? Send a quick message below.</p>
 
-          <a class="button light" href="/downloads/5%20Steps%20to%20Buy%20New%20Home%20Build.pdf" download>
-            Download the Free Buyer Guide
-          </a>
+      <form class="lead-form" action="https://formsubmit.co/jeronathon@themontenegrogroup.com" method="POST">
+        <input type="hidden" name="_subject" value="New Lead: 9350 Golondrina Drive">
+        <input type="hidden" name="property" value="9350 Golondrina Dr, La Mesa, CA 91941">
 
-          <a class="button light" href="mailto:YOUR_EMAIL_HERE?subject=I want info on 9350 Golondrina Dr">
-            Email Me About This Property
-          </a>
-        </div>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number">
+        <textarea name="message" rows="4" placeholder="I would like more information or a private showing."></textarea>
 
-        <p class="fineprint">
-          Jeronathon Angeles | REALTOR® | DRE #01971324<br>
-          Property information should be verified with MLS/listing source. Availability and price may change.
-        </p>
+        <button type="submit">Request Property Information</button>
+      </form>
+
+      <div class="cta-row">
+        <a class="button dark" href="/downloads/5%20Steps%20to%20Buy%20New%20Home%20Build.pdf" download>Download Buyer Guide</a>
+        <a class="button light" href="mailto:YOUR_EMAIL_HERE?subject=9350 Golondrina Drive">Email Jer</a>
       </div>
+    </div>
+  </section>
 
-    </section>
-  </main>
+  <footer>
+    Jeronathon Angeles | REALTOR® | DRE #01971324<br>
+    Montenegro Group Real Estate<br><br>
+    Information deemed reliable but not guaranteed. Buyer to verify all property details, financing, availability, and MLS information.
+  </footer>
+
 </body>
 </html>
