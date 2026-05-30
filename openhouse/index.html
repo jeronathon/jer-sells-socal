@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open House — 9350 Golondrina Dr | La Mesa, CA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f8f5ef;
+    --warm-white: #fdfcf9;
+    --charcoal: #1e1c1a;
+    --gold: #b8965a;
+    --gold-light: #d4b07a;
+    --muted: #7a746c;
+    --border: #e2dbd0;
+  }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--cream);
+    font-family: 'Jost', sans-serif;
+    color: var(--charcoal);
+  }
+
+  body {
+    background-image:
+      radial-gradient(ellipse at 10% 0%, rgba(184,150,90,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 100%, rgba(184,150,90,0.06) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 64px;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 44px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .header-tag {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--charcoal);
+    line-height: 1.1;
+  }
+
+  .header h1 em { font-style: italic; color: var(--gold); }
+
+  .header-sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-top: 10px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px auto 0;
+    width: 220px;
+  }
+  .divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold-light), transparent); }
+  .divider-diamond { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+  /* ── Form wrapper ── */
+  .form-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    width: 100%;
+    max-width: 620px;
+    box-shadow: 0 4px 40px rgba(30,28,26,0.08), 0 1px 4px rgba(30,28,26,0.04);
+    overflow: hidden;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .form-card-header {
+    padding: 28px 36px 0;
+    text-align: center;
+  }
+
+  .form-card-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── Jotform iframe ── */
+  .jotform-wrap {
+    width: 100%;
+    padding: 0 0 8px;
+  }
+
+  .jotform-wrap iframe {
+    width: 100%;
+    min-height: 700px;
+    border: none;
+    display: block;
+  }
+
+  /* ── Footer ── */
+  .page-footer {
+    margin-top: 36px;
+    text-align: center;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .footer-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto 18px;
+    width: 180px;
+  }
+
+  .page-footer .agent-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    letter-spacing: 0.05em;
+  }
+
+  .page-footer .agent-details {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+
+  .page-footer .agent-details a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .page-footer .agent-details a:hover { text-decoration: underline; }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 32px 16px 48px; }
+    .form-card-header { padding: 22px 20px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-tag">Open House · La Mesa, CA</div>
+  <h1>9350 <em>Golondrina</em> Dr</h1>
+  <div class="header-sub">4 Bed · 3 Bath · 2,766 sqft · $1,250,000</div>
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond"></div>
+    <div class="divider-line"></div>
+  </div>
+</div>
+
+<!-- Form Card -->
+<div class="form-card">
+  <div class="form-card-header">
+    <div class="form-card-label">Guest Sign-In</div>
+  </div>
+  <div class="jotform-wrap">
+    <!-- Jotform Embed -->
+    <iframe
+      id="JotFormIFrame-261487633322054"
+      title="Open House Guest Sign-In — 9350 Golondrina Dr"
+      src="https://form.jotform.com/261487633322054"
+      allow="geolocation; microphone; camera"
+      allowfullscreen
+      scrolling="yes"
+    ></iframe>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="page-footer">
+  <div class="footer-divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond"></div>
+    <div class="divider-line"></div>
+  </div>
+  <div class="agent-name">Jeronathon Angeles</div>
+  <div class="agent-details">
+    DRE #1971324 &nbsp;·&nbsp; Montenegro Group Real Estate &nbsp;·&nbsp;
+    <a href="https://jersellssocal.com">jersellssocal.com</a>
+  </div>
+</div>
+
+<!-- Auto-resize script from Jotform -->
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  window.jotformEmbedHandler("iframe[id='JotFormIFrame-261487633322054']", "https://form.jotform.com/")
+</script>
+
+</body>
+</html>
